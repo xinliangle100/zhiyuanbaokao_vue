@@ -37,8 +37,6 @@ const toUserMainView = () => {
 }
 //导入用户信息组件
 import UserInfo from "@/components/User/UserInfo.vue";
-//导入用户志愿列表组件
-import UserAppList from '@/components/User/UserApp/AppCardList.vue';
 
 //切换
 //默认页面
@@ -47,7 +45,6 @@ const currentComponent = ref(UserInfo)
 const headData = ref({
   "0": "返回主页面",
   "1": "用户信息",
-  "2": "志愿列表",
 })
 //切换页面
 const handleSelect1 = (key: string) => {
@@ -58,10 +55,6 @@ const handleSelect1 = (key: string) => {
     case '1':
       currentComponent.value = UserInfo
       break
-    case '2':
-      currentComponent.value = UserAppList
-      break
-
     default:
       currentComponent.value = UserInfo
   }

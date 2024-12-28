@@ -58,6 +58,7 @@ function checkUser() {
       </div>
     </el-col>
     <el-col :span="6" :offset="3" class="form">
+      <p>暂不开放</p>
       <el-form ref="form" size="large" autocomplete="off">
         <el-form-item>
           <h1>管理员登录</h1>
@@ -76,9 +77,6 @@ function checkUser() {
           <div class="flex">
             <router-link :to="{ name: 'LoginView' }">
               <el-link type="info" :underline="false" @click="isRegister = true">返回 →</el-link>
-            </router-link>
-            <router-link :to="{ name: 'ManagementView' }">
-              <el-link type="primary" :underline="false">直接去管理员主页</el-link>
             </router-link>
           </div>
         </el-form-item>

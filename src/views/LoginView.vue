@@ -97,6 +97,7 @@ watch(userLoginInput, newVal => {
     </el-col>
     <el-col :span="6" :offset="3" class="form">
       <!-- 注册表单 -->
+      <p>用户注册需后台同意，因此提供已有账号，账号密码均为user</p>
       <el-form ref="form" size="large" autocomplete="off" v-if="isRegister">
         <el-form-item>
           <h1>用户注册</h1>
@@ -174,9 +175,6 @@ watch(userLoginInput, newVal => {
             </el-link>
             <router-link :to="{ name: 'AdminLoginView' }">
               <el-link type="primary" :underline="false">管理员登陆？</el-link>
-            </router-link>
-            <router-link :to="{ name: 'UserMainView' }">
-              <el-link type="primary" :underline="false">直接去用户主页</el-link>
             </router-link>
           </div>
         </el-form-item>
