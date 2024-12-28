@@ -1,5 +1,4 @@
-安装语法糖
-npm i vite-plugin-vue-setup-extend -D
+
 安装element-plus,icon
 npm install element-plus --save
 npm install @element-plus/icons-vue
