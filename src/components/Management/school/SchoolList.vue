@@ -1,11 +1,13 @@
 <template>
   <SchoolListCard v-for="(school) in data" :key="school.code"
-    :logo_url="'http://127.0.0.1:8000/schoolimgs/schoolIcon/' + school.logo_filename" :cn_name="school.cn_name"
+    :logo_url="webUrl + 'schoolimgs/schoolIcon/' + school.logo_filename" :cn_name="school.cn_name"
     :features="school.features" :province_name="school.province_name" :city_name="school.city_name"
     :categories="school.categories" :belong="school.belong" :hits="school.hits" :rank="school.ranking"
     :code="school.code" />
 </template>
 <script lang="ts" setup name="name">
+import { useUrlStore } from "@/stores/url";
+const { webUrl } = useUrlStore()
 //导入学校卡片
 import { onMounted, ref, watch } from 'vue';
 import SchoolListCard from "./SchoolListCard.vue";

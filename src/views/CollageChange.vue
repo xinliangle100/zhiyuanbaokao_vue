@@ -3,8 +3,7 @@
     <el-header :gutter="24" style="padding-top: 50px;padding-bottom: 30px;height: 150px;">
       <el-row>
         <el-col :span="2" :offset="3" style="display: flex; justify-content: center; align-items:center;">
-          <img class="icon-img" :src="'http://127.0.0.1:8000/schoolimgs/schoolIcon/' + schoolList.logo_filename"
-            alt="Logo Image" />
+          <img class="icon-img" :src="webUrl + 'schoolimgs/schoolIcon/' + schoolList.logo_filename" alt="Logo Image" />
         </el-col>
         <el-col :span="8" class="col-list">
           <el-row>
@@ -54,8 +53,7 @@
             <el-tab-pane label="院校简介" name="first">
               <el-row :gutter="24">
                 <el-col :span="8">
-                  <img class="info-img"
-                    :src="'http://127.0.0.1:8000/schoolimgs/schoolPictures/' + schoolData.banner_url"
+                  <img class="info-img" :src="webUrl + 'schoolimgs/schoolPictures/' + schoolData.banner_url"
                     alt="Logo Image" />
                 </el-col>
                 <el-col :span="16">
@@ -138,6 +136,8 @@
 
 </template>
 <script lang="ts" setup>
+import { useUrlStore } from "@/stores/url";
+const { webUrl } = useUrlStore()
 import { ref, onMounted, computed } from 'vue';
 import axios from 'axios';
 //状态管理

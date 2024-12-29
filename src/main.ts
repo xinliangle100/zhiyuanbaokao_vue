@@ -8,7 +8,7 @@ import axios from 'axios'
 import { createPinia } from 'pinia'
 import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
 
-axios.defaults.baseURL = 'http://127.0.0.1:8000'
+axios.defaults.baseURL = 'http://14.103.232.97:8000'
 
 // 创建 Pinia 实例
 const pinia = createPinia()
